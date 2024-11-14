@@ -1,0 +1,5 @@
+customer_id,product_id,contract_id,contract_price,min_order_quantity,start_date,end_date,pricing_tier
+CUST001,P001,CTR001,42.50,100,2024-01-01,2024-12-31,Standard
+CUST001,P002,CTR001,38.75,150,2024-01-01,2024-12-31,Standard
+CUST002,P001,CTR002,40.25,500,2024-01-01,2024-12-31,Bulk
+CUST002,P003,CTR002,35.00,750,2024-01-01,2024-12-31,Bulk
