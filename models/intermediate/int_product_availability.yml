@@ -1,0 +1,37 @@
+models:
+  - name: int_product_availability
+    description: This model evaluates product availability and pricing adjustments based on inventory levels and contract terms. It determines the availability status of products and calculates adjusted prices considering stock conditions.
+    columns:
+      - name: product_id
+        description: A unique identifier for each product.
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: A unique identifier for each customer associated with the product.
+        data_tests:
+          - not_null
+      - name: contract_price
+        description: The agreed price for the product as per the contract.
+        data_tests:
+          - not_null
+      - name: min_order_quantity
+        description: The minimum quantity required to place an order for the product.
+        data_tests:
+          - not_null
+      - name: total_available_quantity
+        description: The total quantity of the product available in stock.
+        data_tests:
+          - not_null
+      - name: stock_statuses
+        description: The current stock condition of the product, indicating levels such as 'Low' or 'Reorder'.
+        data_tests:
+          - not_null
+      - name: availability_status
+        description: The availability of the product based on stock levels, categorized as 'Available', 'Limited', or 'Unavailable'.
+        data_tests:
+          - accepted_values:
+              values: ['Available', 'Limited', 'Unavailable']
+      - name: adjusted_price
+        description: The price of the product adjusted according to stock status, potentially increased if stock is low or needs reorder.
+        data_tests:
+          - not_null
